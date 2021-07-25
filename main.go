@@ -6,7 +6,7 @@ import (
 
 	"golang.org/x/sys/windows"
 )
-
+// https://devblogs.microsoft.com/oldnewthing/20170310-00/?p=95705
 func main() {
 	folderName := `C:\Users\Spc.Pham\Desktop\test`
 	sidStr := "S-1-1-0"
