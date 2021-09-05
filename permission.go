@@ -18,7 +18,8 @@ func main() {
 	}
 	UID := strconv.Itoa(int(stat.Uid))
 	GID := strconv.Itoa(int(stat.Gid))
-	mode := info.Mode().String() // permission
+	mode := info.Mode().String()
+	x := info.Mode().Perm() // permission
 
 	owner, err := user.LookupId(UID)
 	if err != nil {
@@ -30,5 +31,6 @@ func main() {
 	}
 	fmt.Println(UID, GID, mode)
 	fmt.Println(owner.Name, group.Name)
+	fmt.Println(x)
 
 }
